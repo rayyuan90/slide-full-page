@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <link rel="stylesheet" href="style.css">
+    <script>
+      function screenshot() {
+        domtoimage.toPng(document.body)
+          .then(function(img) {
+            document.body.appendChild(img);
+          })
+        //domtoimage.toPng(document.body)
+        //  .then(function (canvasOrDataUrl) {
+        //    if (typeof canvasOrDataUrl == 'string') {
+        //      var img = new Image();
+        //      img.src = canvasOrDataUrl;
+        //      document.body.appendChild(img);
+        //    } else {
+        //      document.body.appendChild(canvasOrDataUrl);
+        //    }
+        //  })
+        //  .catch(function (error) {
+        //      console.log('oops, something went wrong!', error);
+        //  });
+      } 
+    </script>
+    <script src="dom-to-image.js" async></script>
+  </head>
+
+  <body>
+    <h1>Hello Plunker!</h1>
+    <img src="http://i.imgur.com/eQxoG0h.jpg" width="50%" />
+	<div style="height:888px;width:100v2;text-align:center">sdfsdfsdss</div>
+	<div style="height:888px;width:100v2;text-align:center">444sdfsdfsdss</div>
+	<div style="height:888px;width:100v2;text-align:center">s666dfsdfsdss</div>
+    <button onclick="screenshot()">Take screenshot</button>
+  </body>
+
+</html>
